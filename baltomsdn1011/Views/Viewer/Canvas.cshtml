@@ -3,10 +3,10 @@
 @{
     ViewBag.Title = "Canvas";
 }
-<script src="@Url.Content("~/scripts/app.js")"></script>
+<script src="@Url.Content("~/scripts/app-canvas.js")"></script>
 <script>
     $(function () {
-        bootstrap(@Html.Raw(ServiceStack.Text.JsonSerializer.SerializeToString(Model)))
+        bootstrap(@Html.Raw(Json.Encode(Model)));
     });
 </script>
 

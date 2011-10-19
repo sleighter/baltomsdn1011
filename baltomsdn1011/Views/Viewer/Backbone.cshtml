@@ -1,0 +1,35 @@
+﻿@model baltomsdn1011.Models.Patient
+
+@{
+    ViewBag.Title = "Backbone";
+}
+<script src="@Url.Content("~/scripts/app-backbone.js")"></script>
+<script>
+    $(function () {
+        bootstrap(@Html.Raw(Json.Encode(Model)));
+    });
+</script>
+
+
+<script id="sequence-template" type="html/jquery-template">
+    <div>
+        <a href="#/study/${id}">${Modality}</a>
+    </div>
+</script>
+<script id="demographics-template" type="html/jquery-template">
+    <div>
+        <p>${LastName}, ${FirstName}</p>
+        <p>${DOB}</p>
+    </div>
+</script>
+<script id="viewer-template" type="html/jquery-template">
+
+    <img scr="/viewer/image/${studyid}" />
+
+</script>
+
+<h2>Backbone</h2>
+<p>this doesn't work</p>
+<div id="app">
+
+</div>
