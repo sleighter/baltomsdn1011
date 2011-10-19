@@ -17,16 +17,6 @@ namespace baltomsdn1011.Controllers
             return View();
         }
 
-        public ActionResult Razor() 
-        {
-            return View(Patient.GetPatient());
-        }
-
-        public ActionResult JQTemplates() 
-        {
-            return View(Patient.GetPatient());
-        }
-
         public ActionResult Canvas() 
         {
             return View(Patient.GetPatient());

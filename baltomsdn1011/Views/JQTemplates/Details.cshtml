@@ -1,0 +1,27 @@
+﻿@model Tuple<baltomsdn1011.Models.Patient,int>
+
+@{
+    ViewBag.Title = "Details";
+    var CurrentStudy = Json.Encode(Model.Item1.Studies[Model.Item2]);
+    var Patient = Json.Encode(Model.Item1);
+}
+
+@section head{
+    <script id="panel-link-template" type="text/x-jquery-tmpl">
+        <li><a href="@(Url.Action("JQTemplates"))/${id}">${Modality}</a></li>
+    </script>
+
+    <script id="side-panel-template" type="text/x-jquery-tmpl">
+    
+    </script>
+
+    <script id="main-panel-template" type="text/x-jquery-tmpl">
+    
+    </script>
+}
+
+<h2>jQuery Templates</h2>
+
+<aside id="side-panel"></aside>
+
+<div id="main-panel"></div>

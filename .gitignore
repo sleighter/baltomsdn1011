@@ -1,0 +1,5 @@
+
+*.suo
+/baltomsdn1011/obj
+/baltomsdn1011/bin
+/packages
