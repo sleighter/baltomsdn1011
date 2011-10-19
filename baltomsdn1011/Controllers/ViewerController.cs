@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using baltomsdn1011.Models;
+using System.IO;
 
 namespace baltomsdn1011.Controllers
 {
@@ -27,5 +28,10 @@ namespace baltomsdn1011.Controllers
 
         public ActionResult FileSystem() { return View(Patient.GetPatient()); }
 
+        public ActionResult Image(int id)
+        {
+            var res = File(Url.Content(String.Format("~/Content/images/{0}.jpg", id)),"image/jpeg");
+            return res; 
+        }
     }
 }
