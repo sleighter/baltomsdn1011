@@ -14,6 +14,7 @@ namespace baltomsdn1011.Controllers
 
         public ActionResult Index()
         {
+            
             return View();
         }
 
