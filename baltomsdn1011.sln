@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "baltomsdn1011", "baltomsdn1011\baltomsdn1011.csproj", "{941BF1A5-9AFD-4B10-98B5-3918EB2DF43D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{307D995F-B50A-4C47-85DE-1B66F267D7BA}"
+	ProjectSection(SolutionItems) = preProject
+		README.markdown = README.markdown
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

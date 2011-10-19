@@ -1,21 +1,28 @@
-﻿@{
+﻿@model baltomsdn1011.Models.Patient
+
+@{
     ViewBag.Title = "Canvas";
 }
-<script type="html/jquery-template">
-    
+<script src="@Url.Content("~/scripts/app.js")"></script>
+<script>
+    $(function () {
+        bootstrap(@Html.Raw(ServiceStack.Text.JsonSerializer.SerializeToString(Model)))
+    });
 </script>
-<script id="sequence-template">
+
+
+<script id="sequence-template" type="html/jquery-template">
     <div>
         <a href="#/study/${id}">${Modality}</a>
     </div>
 </script>
-<script id="demographics-template">
+<script id="demographics-template" type="html/jquery-template">
     <div>
         <p>${LastName}, ${FirstName}</p>
         <p>${DOB}</p>
     </div>
 </script>
-<script id="viewer-template">
+<script id="viewer-template" type="html/jquery-template">
     <div>
         <img scr="/razor/image/${id}" />
     </div>
