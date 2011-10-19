@@ -4,11 +4,27 @@
 <script type="html/jquery-template">
     
 </script>
-
+<script id="sequence-template">
+    <div>
+        <a href="#/study/${id}">${Modality}</a>
+    </div>
+</script>
+<script id="demographics-template">
+    <div>
+        <p>${LastName}, ${FirstName}</p>
+        <p>${DOB}</p>
+    </div>
+</script>
+<script id="viewer-template">
+    <div>
+        <img scr="/razor/image/${id}" />
+    </div>
+</script>
 
 <h2>Canvas</h2>
 
 <aside>
+
 </aside>
 
 <div class="main" role="primary">
