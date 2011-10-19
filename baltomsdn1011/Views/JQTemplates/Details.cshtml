@@ -8,15 +8,35 @@
 
 @section head{
     <script id="panel-link-template" type="text/x-jquery-tmpl">
-        <li><a href="@(Url.Action("JQTemplates"))/${id}">${Modality}</a></li>
+        <li><a href="/JQTemplates/Details/${id}">${Modality}</a></li>
     </script>
 
     <script id="side-panel-template" type="text/x-jquery-tmpl">
-    
+        <div>
+            <ol>
+                {{tmpl(Studies) "#panel-link-template"}}
+            </ol>
+        </div>
     </script>
 
-    <script id="main-panel-template" type="text/x-jquery-tmpl">
-    
+    <script id="demographics-template" type="text/x-jquery-tmpl">
+        <p>${LastName}, ${FirstName}</p>
+        <p>${Dob}</p>
+    </script>
+
+    <script id="image-template" type="text/x-jquery-tmpl">
+        <img src="/viewer/image/${id}" alt="${Modality}"/>
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            currentStudy = @(new HtmlString(CurrentStudy));
+            patient = @(new HtmlString(Patient));
+            patient.Dob = new Date(parseInt(patient.Dob.substr(6))).toDateString();
+            $("#side-panel-template").tmpl(patient).appendTo("#side-panel");
+            $("#demographics-template").tmpl(patient).appendTo("#main-panel");
+            $("#image-template").tmpl(currentStudy).appendTo("#image-placeholder");
+        });
     </script>
 }
 
@@ -24,4 +44,7 @@
 
 <aside id="side-panel"></aside>
 
-<div id="main-panel"></div>
+<div id="main-panel">
+    <div id="demographics"></div>
+    <div id="image-placeholder"></div>
+</div>
