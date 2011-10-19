@@ -2,7 +2,6 @@
 *.user
 bin
 obj
-packages
 /baltomsdn1011/obj
 /baltomsdn1011/bin
 /baltomsdn1011/Web.Debug.config

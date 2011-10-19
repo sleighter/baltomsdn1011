@@ -10,15 +10,10 @@ namespace baltomsdn1011.Controllers
 {
     public class ViewerController : Controller
     {
-        //
-        // GET: /Viewer/
-
-        public ActionResult Index()
+        public ActionResult Backbone() 
         {
-            
-            return View();
+            return View(Patient.GetPatient());
         }
-
         public ActionResult Canvas() 
         {
             return View(Patient.GetPatient());
