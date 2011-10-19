@@ -18,5 +18,5 @@
 <div>
     <p>@(String.Format("{0}, {1}",Model.Item1.LastName,Model.Item1.FirstName))</p>
     <p>DOB: @Model.Item1.Dob.ToLongDateString()</p>
-    <img src="@(Url.Action("Image",new {id = CurrentStudy.id}))" alt="@CurrentStudy.Modality" />
+    <img src="@(Url.Action("Image","Viewer",new {id = CurrentStudy.id}))" alt="@CurrentStudy.Modality" />
 </div>
