@@ -1,0 +1,7 @@
+C:\Source\baltomsdn1011\baltomsdn1011\bin\baltomsdn1011.dll
+C:\Source\baltomsdn1011\baltomsdn1011\bin\baltomsdn1011.pdb
+C:\Source\baltomsdn1011\baltomsdn1011\bin\EntityFramework.dll
+C:\Source\baltomsdn1011\baltomsdn1011\bin\EntityFramework.xml
+C:\Source\baltomsdn1011\baltomsdn1011\obj\Debug\ResolveAssemblyReference.cache
+C:\Source\baltomsdn1011\baltomsdn1011\obj\Debug\baltomsdn1011.dll
+C:\Source\baltomsdn1011\baltomsdn1011\obj\Debug\baltomsdn1011.pdb

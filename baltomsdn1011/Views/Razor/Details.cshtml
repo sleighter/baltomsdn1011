@@ -1,0 +1,22 @@
+﻿@model Tuple<baltomsdn1011.Models.Patient,int>
+
+@{
+    ViewBag.Title = "Details";
+    var CurrentStudy = Model.Item1.Studies[Model.Item2];
+}
+
+<h2>Razor Template</h2>
+<aside>
+    @foreach (var study in Model.Item1.Studies)
+    {
+        <div>
+            @(Html.ActionLink(study.Modality,"Details",new { id = study.id}))
+        </div>
+    }
+</aside>
+
+<div>
+    <p>@(String.Format("{0}, {1}",Model.Item1.LastName,Model.Item1.FirstName))</p>
+    <p>DOB: @Model.Item1.Dob.ToLongDateString()</p>
+    <img src="@(Url.Action("Image",new {id = CurrentStudy.id}))" alt="@CurrentStudy.Modality" />
+</div>
