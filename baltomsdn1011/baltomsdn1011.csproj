@@ -148,10 +148,13 @@
     <Content Include="Views\Razor\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\JQTemplates\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Views\Viewer\Canvas.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\JQTemplates\Details.cshtml" />
+    <Folder Include="Content\images\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
