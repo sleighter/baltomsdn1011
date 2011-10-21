@@ -10,6 +10,7 @@ namespace baltomsdn1011.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime Dob { get; set; }
+        public int PatientAge { get; set; }
         public List<Study> Studies { get; set; }
 
         public static Patient GetPatient() {
